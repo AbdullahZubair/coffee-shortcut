@@ -17,5 +17,14 @@
     "require": {
         "drupal/core": "^11.2",
         "drupal/coffee": "^2.0"
+    },
+    "require-dev": {
+        "drupal/coder": "^8.3",
+        "squizlabs/php_codesniffer": "^3.9"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
     }
 }

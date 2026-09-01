@@ -51,7 +51,19 @@ across Coffee updates without any changes on this end.
 
 ## Installation
 
-Add this repository to your project's `composer.json`, then require it:
+This module is not on Packagist or drupal.org, so Composer does not know
+where to find it until you tell it. Run this once, from your project's
+root folder, to register this repository:
+
+```
+composer config repositories.coffee-shortcut vcs https://github.com/AbdullahZubair/coffee-shortcut
+```
+
+That adds an entry to your project's `composer.json` under
+`repositories`, pointing at this GitHub repository. You only need to do
+this once per project, not once per version.
+
+Then require and enable the module as usual:
 
 ```
 composer require abdullahzubair/coffee-shortcut
@@ -65,3 +77,19 @@ the same way with `drush en`.
 
 Then visit Configuration > User interface > Coffee shortcut to set the
 shortcut for this site.
+
+## Verifying it works
+
+After enabling the module and setting a shortcut, a quick way to check
+it took effect:
+
+- With "Block the default alt + D shortcut" turned on, press alt + D on
+  any page. Coffee should not open, and your browser's own alt + D
+  behavior, such as moving focus to the address bar, should happen
+  instead.
+- Coffee's own alt + K should still open Coffee normally either way.
+- If you set a custom shortcut, pressing that combination should open
+  Coffee, the same as alt + K does.
+- Log out, or use a user without the "Access Coffee" permission, and
+  confirm none of this changes anything for that user, since the
+  module only acts for users who can use Coffee in the first place.
