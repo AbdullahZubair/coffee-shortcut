@@ -1,0 +1,8 @@
+name: 'Coffee Shortcut'
+type: module
+description: 'Lets site administrators choose the keyboard shortcut that opens Coffee, so it does not collide with a browser shortcut.'
+core_version_requirement: ^11.2
+version: '1.0.0'
+configure: coffee_shortcut.settings_form
+dependencies:
+  - drupal:coffee

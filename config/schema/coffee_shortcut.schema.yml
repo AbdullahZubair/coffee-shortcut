@@ -1,0 +1,28 @@
+# Schema for the configuration files of the Coffee Shortcut module.
+
+coffee_shortcut.settings:
+  type: config_object
+  label: 'Coffee shortcut settings'
+  mapping:
+    block_default_shortcut:
+      type: boolean
+      label: 'Block the default alt + D shortcut'
+    custom_shortcut:
+      type: mapping
+      label: 'Custom shortcut'
+      mapping:
+        alt:
+          type: boolean
+          label: 'Alt'
+        shift:
+          type: boolean
+          label: 'Shift'
+        ctrl:
+          type: boolean
+          label: 'Ctrl'
+        meta:
+          type: boolean
+          label: 'Meta'
+        key:
+          type: string
+          label: 'Key'

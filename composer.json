@@ -1,0 +1,21 @@
+{
+    "name": "abdullahzubair/coffee-shortcut",
+    "description": "Lets site administrators choose the keyboard shortcut that opens Coffee, so it does not collide with a browser shortcut.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/AbdullahZubair/coffee-shortcut",
+    "support": {
+        "source": "https://github.com/AbdullahZubair/coffee-shortcut",
+        "issues": "https://github.com/AbdullahZubair/coffee-shortcut/issues"
+    },
+    "authors": [
+        {
+            "name": "Abdullah Zubair",
+            "email": "abdullahzubair2015@gmail.com"
+        }
+    ],
+    "require": {
+        "drupal/core": "^11.2",
+        "drupal/coffee": "^2.0"
+    }
+}

@@ -1,0 +1,7 @@
+coffee_shortcut.settings_form:
+  path: '/admin/config/user-interface/coffee-shortcut'
+  defaults:
+    _form: 'Drupal\coffee_shortcut\Form\CoffeeShortcutSettingsForm'
+    _title: 'Coffee shortcut'
+  requirements:
+    _permission: 'administer coffee'

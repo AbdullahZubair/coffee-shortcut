@@ -1,0 +1,5 @@
+coffee_shortcut.settings_form:
+  title: 'Coffee shortcut'
+  description: 'Choose the keyboard shortcut that opens Coffee.'
+  route_name: coffee_shortcut.settings_form
+  parent: system.admin_config_ui

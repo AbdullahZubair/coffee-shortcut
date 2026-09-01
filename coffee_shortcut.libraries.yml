@@ -1,0 +1,9 @@
+shortcut:
+  version: 1.x
+  js:
+    js/coffee-shortcut.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/drupalSettings
+    - coffee/drupal.coffee
