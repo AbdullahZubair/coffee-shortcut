@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<ruleset name="Coffee Shortcut">
+  <description>Coding standard for the Coffee Shortcut module.</description>
+
+  <!-- Only check this module's own files. Anything Composer installs,
+       or that ends up in this folder some other way, is never scanned,
+       no matter what is present alongside the module. -->
+  <file>coffee_shortcut.info.yml</file>
+  <file>coffee_shortcut.libraries.yml</file>
+  <file>coffee_shortcut.links.menu.yml</file>
+  <file>coffee_shortcut.routing.yml</file>
+  <file>src</file>
+  <file>js</file>
+  <file>config</file>
+
+  <arg name="extensions" value="php,module,inc,install,test,profile,theme,yml,js"/>
+  <arg name="colors"/>
+
+  <rule ref="Drupal"/>
+  <rule ref="DrupalPractice"/>
+
+  <!-- JavaScript has no uppercase TRUE, FALSE or NULL the way PHP does,
+       unlike Drupal's PHP coding standard, applying this rule to .js
+       files is a false positive, and auto fixing it would break the
+       script at runtime. -->
+  <rule ref="Generic.PHP.UpperCaseConstant.Found">
+    <exclude-pattern>*.js</exclude-pattern>
+  </rule>
+
+  <!-- This sniff assumes every module is packaged by drupal.org, which
+       adds "version" to the info file automatically during that process.
+       This module is published from GitHub over Composer instead, so
+       nothing else ever sets that key. Leaving it here on purpose is
+       what lets Drupal show a real version number instead of "Unknown"
+       wherever the module's version is displayed. -->
+  <rule ref="Drupal.InfoFiles.AutoAddedKeys">
+    <exclude-pattern>*.info.yml</exclude-pattern>
+  </rule>
+</ruleset>
